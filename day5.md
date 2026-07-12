@@ -1,7 +1,7 @@
-day5 learnings
+`day5 learnings
 
-plugins why do we need them
-till now every skill like web search or calculator was hardcoded inside the agent so if i want to add a new ability i have to open the agent code and change it. plugins fix this, a plugin is a separate piece of code that lives outside the agent and the agent discovers it and loads it at runtime so the agent code never changes we just drop a new file and the agent gets a new ability
+plugins
+so plugins are basically pieces of code thet are outside the agent code that add extra functionalitites to the agent without changing the agents core code and when the agent code runs it takes it on too  so basically why we use plugins is that without these all the functionalities of the agent are just hardcoded in the agent code with plugins we just add another file and the agent runs it when it runs
 
 how a plugin works
 every plugin follows the same contract meaning it has the same shape like a name, a description and a run function. the agent has a plugin loader that scans a folder finds the plugin files loads them and registers them into the tool list automatically. this is why the contract matters if every plugin looks the same the loader can treat them all the same way without knowing what is inside them
@@ -16,3 +16,4 @@ for example if i ask what is the population of france times 2 the agent first us
 
 when to stop
 the agent needs a stopping condition otherwise it loops forever, it stops when the goal is reached or when it hits a max step limit so a stuck agent doesnt burn tokens forever
+`
